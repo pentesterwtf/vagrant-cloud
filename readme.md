@@ -4,7 +4,7 @@ Creates a bunch of vagrant boxes for easy vagrant-up'ing
 
 * Needs an environment variable set, `DGO_KEY` (https://cloud.digitalocean.com/settings/api)
 * Requires `vagrant-digitalocean`
-* Boxes are Fedora 30
+* Boxes are Fedora 31
 
 # Current boxes
 
@@ -32,3 +32,4 @@ Stick the following into the Vagrantfile:
     xxx.vm.hostname = "test"
   end
 ```
+

@@ -1,12 +1,12 @@
 apikey = `echo $DGO_KEY`.strip()
 Vagrant.configure('2') do |config|
   config.vm.provider :digital_ocean do |provider, override|
-    override.ssh.private_key_path = '~/.ssh/id_rsa'
+    override.ssh.private_key_path = '~/.ssh/id_rsa_dgo'
     override.nfs.functional = false
     #override.vm.hostname = "stockbox";
     provider.ssh_key_name = `echo $USER`.strip()
     provider.token = apikey
-    provider.image = 'fedora-30-x64'
+    provider.image = 'fedora-31-x64'
     provider.region = 'lon1'
     provider.size = '512mb'
     config.ssh.insert_key = true
